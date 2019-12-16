@@ -1,0 +1,8 @@
+ul
+    each page in pages
+        -page == currentPage ? active = 'active' : active = ''
+        
+        if page == 'inicio'
+            li: a(href="/" class=active) #{page}
+        else
+            li: a(href="#" class=active) #{page}

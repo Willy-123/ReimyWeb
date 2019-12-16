@@ -1,0 +1,26 @@
+block config
+    include ../config/config.pug
+
+doctype html
+html(lang="en")
+    head
+        title #{pageTitle} | #{siteTitle}
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="description", content=description)
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="/css/style-dist.css")
+        
+    body(class=currentPage) 
+        .main-container
+            header.main-header
+                // Menu
+                nav.menu
+                    a(class="link-logo" href="/")
+                        img(src="/img/svg/logoblanco.svg" alt="Reimy Del Orbe Logo").logo
+                    include ../blocks/menu.pug
+
+            .main-content
+                main
+                    block main
+                
